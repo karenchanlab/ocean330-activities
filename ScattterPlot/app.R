@@ -71,9 +71,9 @@ server <- function(input, output, session) {
 
     # Add fit if requested
     if (input$fit_type == "lm") {
-      p <- p + geom_smooth(method = "lm", se = TRUE, color = "steelblue", linewidth = 1)
+      p <- p + geom_smooth(method = "lm", se = FALSE, color = "steelblue", linewidth = 1)
     } else if (input$fit_type == "loess") {
-      p <- p + geom_smooth(method = "loess", se = TRUE, color = "firebrick", linewidth = 1)
+      p <- p + geom_smooth(method = "loess", se = FALSE, color = "firebrick", linewidth = 1)
     }
 
     # Invert Y axis if requested
